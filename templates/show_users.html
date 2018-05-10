@@ -1,0 +1,52 @@
+<html>
+
+<head>Users
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+
+<body>
+	<h2>Users Table</h2><br>
+	<table>
+		<tr>
+		<th><center>Username</center></th>
+		<th><center>Fullname</center></th>
+		<th><center>Email</center></th>
+		<th><center>Password</center></th>
+		<th><center>Nfc_Id</center></th>
+		</tr>
+	  	{% for row in users %}
+			<tr>
+				<p>
+		    			<td><center>{{row.username}}</center></td>
+		    			<td><center>{{row.fullname}}</center></td>
+					<td><center>{{row.email}}</center></td>
+					<td><center>{{row.password}}</center></td>
+					<td><center>{{row.nfc_id}}</center></td>
+				</p>
+			</tr>
+	  	{% endfor %}
+	 </table>
+	     <ul>
+	      <li><a href="/">Come back to index</a></li>
+	     </ul>	
+
+</body>
+
+</html>

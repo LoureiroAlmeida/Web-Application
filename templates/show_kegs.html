@@ -1,0 +1,46 @@
+<html>
+
+<head>Kegs
+
+<style>
+	table {
+    	font-family: arial, sans-serif;
+    	border-collapse: collapse;
+    	width: 100%;
+	}
+
+	td, th {
+    	border: 1px solid #dddddd;
+    	text-align: left;
+    	padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	    background-color: #dddddd;
+	}
+    </style>
+</head>
+
+<body>
+	<h2>Kegs Table</h2><br>
+	<table>
+		<tr>
+		<th><center>Keg_Id</center></th>
+		<th><center>Keg_Flow</center></th>
+		</tr>
+	  	{% for row in kegs %}
+			<tr>
+				<p>
+		    			<td><center>{{row.keg_id}}</center></td>
+		    			<td><center>{{row.keg_flow}}</center></td>
+				</p>
+			</tr>
+	  	{% endfor %}
+	 </table>
+	     <ul>
+	      <li><a href="/">Come back to index</a></li>
+	     </ul>	
+
+</body>
+
+</html>
